@@ -10,7 +10,7 @@ class LegalCaseType(str, enum.enum):
 
 class LegalCase(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    case_type = db.Column(db.Enum(LegalCase))
+    case_type = db.Column(db.Enum(LegalCaseType))
     jurisdiction = db.Column(db.String)
     judge = db.Column(db.String)
     docket_number = db.Column(db.String)
