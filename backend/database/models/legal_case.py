@@ -4,8 +4,8 @@ import enum
 
 class LegalCaseType(str, enum.enum):
     # TODO: Do we want string enumerations to be all caps? i.e. CIVIL = "CIVIL"
-    CIVIL = "civil"
-    CRIMINAL = "criminal"
+    CIVIL = "CIVIL"
+    CRIMINAL = "CRIMINAL"
 
 
 class LegalCase(db.Model):
