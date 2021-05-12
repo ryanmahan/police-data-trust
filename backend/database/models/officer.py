@@ -1,6 +1,7 @@
 from backend.database import db
 import enum
 
+
 class Rank(str, enum.enum):
     # TODO: Is this comprehensive?
     TECHNICIAN = "TECHNICIAN"
@@ -12,6 +13,7 @@ class Rank(str, enum.enum):
     CAPTAIN = "CAPTAIN"
     DEPUTY = "DEPUTY"
     CHIEF = "CHIEF"
+
 
 class Officer(db.model):
     id = db.Column(db.Integer, primary_key=True)
