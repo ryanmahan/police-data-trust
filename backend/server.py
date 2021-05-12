@@ -115,9 +115,28 @@ def login():
         if user is not None and user.verify_password(form["password"]):
             login_user(user, form["remember_me"])
             # return redirect(request.args.get("next") or "/")
+<<<<<<< HEAD
             return {"status":"ok", "message": "Successfully logged in.", "user": { "email": form['email']}}
         else:
             return {"status":"ok", "message": "Error. Username or Password invalid."}
+=======
+<<<<<<< HEAD
+            return {
+                "status": "ok",
+                "message": "Successfully logged in.",
+                "user": {"email": form["email"]},
+            }
+        else:
+            return {
+                "status": "ok",
+                "message": "Error. Username or Password invalid.",
+            }
+=======
+            return {"status":"ok", "message": "Successfully logged in.", "user": { "email": form['email']}}
+        else:
+            return {"status":"ok", "message": "Error. Username or Password invalid."}
+>>>>>>> d46d279... adds login logic
+>>>>>>> 07b33c6ca9a598a1ab1b37d30fa176cb3df84c77
     missing_fields = ""
     for field in form:
         if field == "":

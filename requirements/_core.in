@@ -13,5 +13,8 @@ pytest
 pytest-cov
 pytest-flask-sqlalchemy
 python-dotenv
-PyYAML
-requests
+flask-login
+flask-user
+wtforms
+flask-wtf
+flask-babelex

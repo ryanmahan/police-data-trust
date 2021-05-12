@@ -1,7 +1,7 @@
+from flask import Flask, redirect, render_template, session, request, flash
+from flask_login import login_required
 import click
 from typing import Optional
-from flask import Flask
-
 from .routes.incidents import incident_routes
 from .config import get_config_from_env
 from .database import db
