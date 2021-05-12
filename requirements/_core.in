@@ -18,5 +18,3 @@ flask-user
 wtforms
 flask-wtf
 flask-babelex
-PyYAML
-requests
