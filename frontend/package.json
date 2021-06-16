@@ -22,10 +22,5 @@
   },
   "lint-staged": {
     "**.{js,css,md,tsx}": "prettier . --write"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo pls && lint-staged"
-    }
   }
 }
