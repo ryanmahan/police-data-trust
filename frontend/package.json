@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prepare": "cd .. && ls && husky install frontend/.husky"
+    "prepare": "cd .. && ls && husky install frontend"
   },
   "dependencies": {
     "next": "^10.2.0",
@@ -21,6 +21,6 @@
     "typescript": "^4.2.4"
   },
   "lint-staged": {
-    "*": "echo linting && prettier . --write"
+    "*.{js,css,md,tsx}": "prettier frontend --write"
   }
 }
