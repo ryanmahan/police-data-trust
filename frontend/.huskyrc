@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "pre-commit": "echo pls && lint-staged"
+    "pre-commit": "ls && lint-staged"
   }
 }
