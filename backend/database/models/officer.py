@@ -1,8 +1,10 @@
-from backend.database import db
+from .. import db
+from .types.enums import Gender
+from .types.enums import Race
 import enum
 
 
-class Rank(str, enum.enum):
+class Rank(str, enum.Enum):
     # TODO: Is this comprehensive?
     TECHNICIAN = "TECHNICIAN"
     OFFICER = "OFFICER"
@@ -15,6 +17,7 @@ class Rank(str, enum.enum):
     CHIEF = "CHIEF"
 
 
+<<<<<<< HEAD
 class Officer(db.model):
     id = db.Column(db.Integer, primary_key=True)
     # TODO: Is this different than primary key, can we name it better
@@ -30,3 +33,24 @@ class Officer(db.model):
     # TODO: number of stars?
     star = db.Column(db.Integer)
     age = db.Column(db.Integer)
+=======
+class Officer(db.Model):
+    id = db.Column(db.Integer, primary_key=True)  # officer id
+    first_name = db.Column(db.Text)
+    last_name = db.Column(db.Text)
+    race = db.Column(db.Enum(Race))
+    gender = db.Column(db.Enum(Gender))
+    appointed_date = db.Column(db.DateTime)
+    badge = db.Column(db.Text)
+    unit = db.Column(db.Text)  # type?
+    # Note: rank at time of incident
+    rank = db.Column(db.Text)  # type?
+    star = db.Column(db.Text)  # type?
+    date_of_birth = db.Column(db.Date)
+    # TODO: Age changes over time. Might we use birth year?
+
+
+class OfficerAtIncident(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    # TODO: Relationships, fields?
+>>>>>>> 682aa264d7fbb0a7bdf4530e2623a07c69f3b07f
