@@ -17,23 +17,6 @@ class Rank(str, enum.Enum):
     CHIEF = "CHIEF"
 
 
-<<<<<<< HEAD
-class Officer(db.model):
-    id = db.Column(db.Integer, primary_key=True)
-    # TODO: Is this different than primary key, can we name it better
-    officer_ID = db.Column(db.String)
-    first = db.Column(db.String)
-    last = db.Column(db.String)
-    gender = db.Column(db.String)
-    race = db.Column(db.String)
-    apptDate = db.Column(db.DateTime)
-    # TODO: is this a number?
-    unit = db.Column(db.String)
-    rank = db.Column(db.Enum(Rank))
-    # TODO: number of stars?
-    star = db.Column(db.Integer)
-    age = db.Column(db.Integer)
-=======
 class Officer(db.Model):
     id = db.Column(db.Integer, primary_key=True)  # officer id
     first_name = db.Column(db.Text)
@@ -53,4 +36,3 @@ class Officer(db.Model):
 class OfficerAtIncident(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     # TODO: Relationships, fields?
->>>>>>> 682aa264d7fbb0a7bdf4530e2623a07c69f3b07f
