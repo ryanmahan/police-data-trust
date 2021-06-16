@@ -1,7 +1,7 @@
-;(function () {
-  var exports = {}
-  exports.id = 820
-  exports.ids = [820]
+(function () {
+  var exports = {};
+  exports.id = 820;
+  exports.ids = [820];
   exports.modules = {
     /***/ 318: /***/ function (module) {
       function _interopRequireDefault(obj) {
@@ -9,38 +9,43 @@
           ? obj
           : {
               default: obj,
-            }
+            };
       }
 
-      module.exports = _interopRequireDefault
+      module.exports = _interopRequireDefault;
 
       /***/
     },
 
-    /***/ 900: /***/ function (__unused_webpack_module, exports, __webpack_require__) {
-      "use strict"
+    /***/ 900: /***/ function (
+      __unused_webpack_module,
+      exports,
+      __webpack_require__
+    ) {
+      "use strict";
 
-      var _interopRequireDefault = __webpack_require__(318)
+      var _interopRequireDefault = __webpack_require__(318);
 
-      exports.__esModule = true
-      exports.default = void 0
+      exports.__esModule = true;
+      exports.default = void 0;
 
-      var _react = _interopRequireDefault(__webpack_require__(297))
+      var _react = _interopRequireDefault(__webpack_require__(297));
 
-      var _head = _interopRequireDefault(__webpack_require__(273))
+      var _head = _interopRequireDefault(__webpack_require__(273));
 
       const statusCodes = {
         400: "Bad Request",
         404: "This page could not be found",
         405: "Method Not Allowed",
         500: "Internal Server Error",
-      }
+      };
 
       function _getInitialProps({ res, err }) {
-        const statusCode = res && res.statusCode ? res.statusCode : err ? err.statusCode : 404
+        const statusCode =
+          res && res.statusCode ? res.statusCode : err ? err.statusCode : 404;
         return {
           statusCode,
-        }
+        };
       }
       /**
        * `Error` component used for handling errors.
@@ -48,9 +53,11 @@
 
       class Error extends _react.default.Component {
         render() {
-          const { statusCode } = this.props
+          const { statusCode } = this.props;
           const title =
-            this.props.title || statusCodes[statusCode] || "An unexpected error has occurred"
+            this.props.title ||
+            statusCodes[statusCode] ||
+            "An unexpected error has occurred";
           return /*#__PURE__*/ _react.default.createElement(
             "div",
             {
@@ -59,7 +66,13 @@
             /*#__PURE__*/ _react.default.createElement(
               _head.default,
               null,
-              /*#__PURE__*/ _react.default.createElement("title", null, statusCode, ": ", title)
+              /*#__PURE__*/ _react.default.createElement(
+                "title",
+                null,
+                statusCode,
+                ": ",
+                title
+              )
             ),
             /*#__PURE__*/ _react.default.createElement(
               "div",
@@ -93,14 +106,14 @@
                 )
               )
             )
-          )
+          );
         }
       }
 
-      exports.default = Error
-      Error.displayName = "ErrorPage"
-      Error.getInitialProps = _getInitialProps
-      Error.origGetInitialProps = _getInitialProps
+      exports.default = Error;
+      Error.displayName = "ErrorPage";
+      Error.getInitialProps = _getInitialProps;
+      Error.origGetInitialProps = _getInitialProps;
       const styles = {
         error: {
           color: "#000",
@@ -138,31 +151,31 @@
           margin: 0,
           padding: 0,
         },
-      }
+      };
 
       /***/
     },
 
     /***/ 273: /***/ function (module) {
-      "use strict"
-      module.exports = require("next/dist/next-server/lib/head.js")
+      "use strict";
+      module.exports = require("next/dist/next-server/lib/head.js");
 
       /***/
     },
 
     /***/ 297: /***/ function (module) {
-      "use strict"
-      module.exports = require("react")
+      "use strict";
+      module.exports = require("react");
 
       /***/
     },
-  }
+  };
   // load runtime
-  var __webpack_require__ = require("../webpack-runtime.js")
-  __webpack_require__.C(exports)
+  var __webpack_require__ = require("../webpack-runtime.js");
+  __webpack_require__.C(exports);
   var __webpack_exec__ = function (moduleId) {
-    return __webpack_require__((__webpack_require__.s = moduleId))
-  }
-  var __webpack_exports__ = __webpack_exec__(900)
-  module.exports = __webpack_exports__
-})()
+    return __webpack_require__((__webpack_require__.s = moduleId));
+  };
+  var __webpack_exports__ = __webpack_exec__(900);
+  module.exports = __webpack_exports__;
+})();

@@ -66,5 +66,7 @@
     ".next/server/font-manifest.json",
     ".next/BUILD_ID"
   ],
-  "ignore": ["node_modules/next/dist/compiled/@ampproject/toolbox-optimizer/**/*"]
+  "ignore": [
+    "node_modules/next/dist/compiled/@ampproject/toolbox-optimizer/**/*"
+  ]
 }
