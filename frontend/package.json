@@ -21,6 +21,6 @@
     "typescript": "^4.2.4"
   },
   "lint-staged": {
-    "*": "prettier ./frontend --write"
+    "*": "echo linting && prettier ./frontend --write"
   }
 }
