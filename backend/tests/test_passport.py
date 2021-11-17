@@ -1,4 +1,3 @@
-import pytest
 from backend.database.models.passport_request import RequestStatus
 from backend.database.models.types.enums import UserRole
 from ..database import PassportRequest, User
